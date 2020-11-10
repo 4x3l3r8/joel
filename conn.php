@@ -1,13 +1,18 @@
 <?php
-define('DBHOST','localhost');
+/* define('DBHOST','localhost');
 define('DBUSER', 'root');
 define('DBPASS', '');
-define('DBNAME', 'joel');
+define('DBNAME', 'joel'); */
 
-$conn = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "joel";
+
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if ($conn) {
-    $set_db = mysqli_select_db($conn, DBNAME);
+    $set_db = mysqli_select_db($conn, $dbname);
     if(!$set_db){
         die("No database selected: " .mysqli_connect_error());
     }else {
