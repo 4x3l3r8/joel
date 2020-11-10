@@ -28,70 +28,7 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-size: 100%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        .form-container{
-            position: absolute;
-            top: 17%;
-            left: 30%;
-            padding: 2%;
-            /* display: flex; */
-            width: 40%;
-            height: auto;
-            background-color: rgb(27, 117, 117);
-            border-radius: 16px 16px 0px 0px;
-            box-shadow: 0px 0px 10px 5px rgb(37, 115, 139);
-            /* flex-wrap: wrap; */
-            /* align-items: center; */
-        }
-        input:not([type=submit]), select{
-            margin: 5px 0px 5px 0px;
-            padding: 0.55%;
-            background: none;
-            border-bottom: 2px solid #1fa2ae ;
-            border-radius: 6px;
-            color: rgb(67, 67, 71);
-            transition: 1s;
-        }
-        input:focus, select:focus{
-            outline: none;
-            border-bottom: 2px solid rgb(255, 0, 0);
-        }
-        .fullname{
-            width: 47.72934%;
-            border: none;
-        }
-        input[type=email], input[type=password], input[name=nationality], select, input[name=department]{
-            width: 100%;
-            border: none;
-            border-bottom: 2px solid #1fa2ae ;
-        }
-        input[name=gender]:selected{
-            color: greenyellow;
-            border: none;
-            display: none;
-        }
-        input[type=submit]{
-            width: 25%;
-            position: relative;
-            float: right;
-            margin: 10px 15px 5px 5px;
-            border: none;
-            background: linear-gradient(to left, #ea3e4e, #e2e34a);
-            padding: 5px;
-            box-shadow: 2px 3px 4px #111;
-            color: white;
-        }
-        input[type=submit]:active{
-            box-shadow: 2px 3px 4px #111 inset;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Dashboard | Sign-up</title>
 </head>
 <body>
