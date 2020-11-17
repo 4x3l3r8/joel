@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
         $done = mysqli_query($conn, $query);
         if($done){
             echo "<script>window.alert('You\'ve been registered')</script>";
-        echo "<script>window.location.href='index.html?registered'</script>";
+        echo "<script>window.location.href='index.php?r=registered'</script>";
         }else {
             echo "not done";
         }

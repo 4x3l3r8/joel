@@ -1,28 +1,3 @@
-<?php
-require_once('conn.php');
-
-if (isset($_POST["submit"])) {
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $gender = $_POST['gender'];
-    $password = $_POST['password'];
-    $nationality = $_POST['nationality'];
-    $faculty = $_POST['faculty'];
-    $department = $_POST['department'];
-    $date_registered = date("Y-m-j h:i:s");
-
-        $query = "INSERT INTO student(firstname, lastname, email, gender, password, nationality, faculty, department, date_registered) 
-        VALUES('$firstname', '$lastname', '$email', '$gender', '$password','$nationality', '$faculty', '$department', '$date_registered')";
-        $done = mysqli_query($conn, $query);
-        if($done){
-            echo "<script>window.alert('You\'ve been registered')</script>";
-        echo "<script>window.location.href='index.php?registered'</script>";
-        }else {
-            echo "not done";
-        }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +8,7 @@ if (isset($_POST["submit"])) {
 </head>
 <body>
     <div class="form-container">
-        <form action="" method="post">
+        <form action="signup.php" method="post">
             <!-- <label for="firstname">Firstname:</label> -->
             <input type="text" name="firstname" placeholder="Firstname" id="fname" class="fullname" required>
             
